@@ -15,10 +15,10 @@ def sacar_cartas():
 
 def fin():
     fin = input("\n[salir]      [reset]\n\n").strip().lower()
-    if fin == "salir":
-        raise KeyboardInterrupt
     if fin == "reset":
         main()
+    else:
+        raise KeyboardInterrupt
 
 def par_o_impar():
     while True:
