@@ -8,7 +8,7 @@ def sacar_cartas():
     global carta1, carta2, carta3, carta4, baraja
     while True:   
         baraja = input("¿Con qué baraja quieres jugar?\n\n[e]spañola      [f]rancesa\n\n").strip().lower()
-        if baraja in ["e", "es", "españa", "española", "español"]:
+        if baraja in ["e", "es", "españa", "española", "español", "ñ"]:
             baraja = baraja_es
             while True:
                 carta1 = random.choice(baraja_es.deck)
