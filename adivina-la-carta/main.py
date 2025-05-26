@@ -10,25 +10,37 @@ def sacar_cartas():
         baraja = input("¿Con qué baraja quieres jugar?\n\n[e]spañola      [f]rancesa\n\n").strip().lower()
         if baraja in ["e", "es", "españa", "española", "español", "ñ"]:
             baraja = baraja_es
-            while True:
-                carta1 = random.choice(baraja_es.deck)
-                carta2 = random.choice(baraja_es.deck)
-                carta3 = random.choice(baraja_es.deck)
-                carta4 = random.choice(baraja_es.deck)
-                lista_cartas = [carta1, carta2, carta3, carta4]
-                if len(lista_cartas) == len(set(lista_cartas)):
-                    break
+            # Método alternativo, mismo resultado, pero menos eficiente:
+            # while True:
+            #     carta1 = random.choice(baraja_es.deck)
+            #     carta2 = random.choice(baraja_es.deck)
+            #     carta3 = random.choice(baraja_es.deck)
+            #     carta4 = random.choice(baraja_es.deck)
+            #     lista_cartas = [carta1, carta2, carta3, carta4]
+            #     if len(lista_cartas) == len(set(lista_cartas)):
+            #         break
+            random.shuffle(baraja_es.deck)
+            carta1 = baraja_es.deck[0]
+            carta2 = baraja_es.deck[1]
+            carta3 = baraja_es.deck[2]
+            carta4 = baraja_es.deck[3]
             break
         elif baraja in ["f", "fr", "francia", "francesa", "frances", "francés"]:
             baraja = baraja_fr
-            while True:
-                carta1 = random.choice(baraja_fr.deck)
-                carta2 = random.choice(baraja_fr.deck)
-                carta3 = random.choice(baraja_fr.deck)
-                carta4 = random.choice(baraja_fr.deck)
-                lista_cartas = [carta1, carta2, carta3, carta4]
-                if len(lista_cartas) == len(set(lista_cartas)):
-                    break
+            # Método alternativo, mismo resultado, pero menos eficiente:
+            # while True:
+            #     carta1 = random.choice(baraja_fr.deck)
+            #     carta2 = random.choice(baraja_fr.deck)
+            #     carta3 = random.choice(baraja_fr.deck)
+            #     carta4 = random.choice(baraja_fr.deck)
+            #     lista_cartas = [carta1, carta2, carta3, carta4]
+            #     if len(lista_cartas) == len(set(lista_cartas)):
+            #         break
+            random.shuffle(baraja_fr.deck)
+            carta1 = baraja_fr.deck[0]
+            carta2 = baraja_fr.deck[1]
+            carta3 = baraja_fr.deck[2]
+            carta4 = baraja_fr.deck[3]
             break
         else:
             print("\nCreo que no te he entendido bien...\n")
