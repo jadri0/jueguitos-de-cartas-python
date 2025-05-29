@@ -1,4 +1,4 @@
-# jueguitos-de-cartas-python
+# adivina-la-carta
 
 Un juego sencillo de cartas escrito en Python. Un pequeño proyecto que comencé para empezar a familiarizarme con el uso de funciones y con la programación orientada a objetos, y también para aprender a escribir e importar mis propios módulos y paquetes, estructurando un proyecto de una manera más organizada y profesional.
 El objetivo del juego es adivinar correctamente una serie de condiciones relacionadas con cuatro cartas seleccionadas al azar.
